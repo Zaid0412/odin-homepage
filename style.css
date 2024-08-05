@@ -1,12 +1,337 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root{
     --primary-clr: #fff;
     --secondary-clr: #222831;
 }
 
+*{
+    /* font-family: "Poppins", sans-serif; */
+    /* font-family: "Josefin Sans", sans-serif; */
+    font-family: "Outfit", sans-serif;
+
+}
+
 body{
     background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+  
     padding: 0;
     margin: 0;
+}
+
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    /* grid-template-   rows: repeat(6, 1fr); */
+}
+
+
+ /* Header */
+header{
+    box-sizing: border-box  ;
+    background-color: azure;
+    /* width: 100vw; */
+    padding: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.twitter-icon{
+    width: 20px;
+    height:auto;
+}
+
+.pfp img{
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.abt-me{
+    width: 40vw;
+    padding: 2em;
+    background-color: antiquewhite;
+    font-size: 0.8em;
+    
+}
+
+.abt-me h1{
+    font-size: 1.5em;
+}
+
+.icons{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.icon{
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    filter: opacity(.5);
+    transition: all 0.15s ease;
+}
+
+.icon:hover{
+    filter: opacity(1);
+    transform: scale(1.05);
+}
+
+
+.main{
+    box-sizing: border-box;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: repeat(2 ,1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 5em;
+    gap: 1em;
+}
+
+.main-content-heading{
+    padding-left: 5em;
+    align-self: center;
+}
+
+
+.project{
+    box-sizing: border-box;
+    border-radius: 1em;
+    padding: 2em;
+    height: 447px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}  
+
+.project:hover{
+    transform: scale(1.025);
+}
+
+.project-image{
+    width: 100%;
+    border-bottom: 1px solid var(--secondary-clr);
+}
+
+.project-image img{
+    width: 100%;
+    height: auto;
+}
+ 
+
+.project-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading-icons{
+    display: flex;
+    gap: 1em;
+}
+
+.weather-app{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.todo-list{
+    grid-row:1/2 ;
+    grid-column:2/3 ;
+}
+
+.signup-page{
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+.tic-tac-toe{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.cube-timer{
+    grid-row:2/3 ;
+    grid-column:2/3; 
+}
+
+.etch-a-sketch{
+    grid-row: 2/3;
+    grid-column: 3/4;
+} 
+
+footer{
+    background-color: antiquewhite;
+    display: flex;
+    font-size: 1.5em;
+}
+
+.a{
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.non-clickable-icon{
+    filter: opacity(1) !important;
+    cursor: default;
+}
+
+.non-clickable-icon:hover{
+    transform: scale(1);
+}
+
+.footer-img img{
+    width: 23vw;
+}
+
+.footer-img,
+.footer-content{
+    padding: 5em;
+}
+
+@media (max-width:1074px) {
+
+.main{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.main-content-heading{
+    text-align: center;
+}
+
+header{
+    width: 100%;
+}
+    
+.weather-app{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.todo-list{
+    grid-row:1/2 ;
+    grid-column:2/3 ;
+}
+
+.signup-page{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.tic-tac-toe{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.cube-timer{
+    grid-row:3/4 ;
+    grid-column:1/2; 
+}
+
+.etch-a-sketch{
+    grid-row: 2/4;
+    grid-column: 2/3;
+} 
+footer{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+.footer-img img{
+    width: 70vw;
+}
+}
+
+
+@media (max-width: 766px){
+    .main{
+        display: grid;
+   
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: repeat(6, 1fr); */
+    }
+
+    .project{
+        justify-self: end;
+    }
+    
+    header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+    }
+
+    .main-content-heading{
+        text-align: center;
+    }
+
+    .project{
+        width: 100vw;
+    }
+        
+    .weather-app{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    
+    .todo-list{
+        grid-row:2/3 ;
+        grid-column:1/2 ;
+    }
+    
+    .signup-page{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    
+    .tic-tac-toe{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    
+    .cube-timer{
+        grid-row:5/6 ;
+        grid-column:1/2; 
+    }
+    
+    .etch-a-sketch{
+        grid-row: 6/7;
+        grid-column: 1/2;
+    } 
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+    }
+
+    .footer-img img{
+        width: 70vw;
+    }
+    
 }
